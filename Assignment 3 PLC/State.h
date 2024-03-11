@@ -9,12 +9,13 @@ class State
 {
 private:
 	string name;
-
 public:
+	bool acceptingState;
+	bool startingState;
 	State(int num);
-	void createLink(State* newState, int condition);
+	void createLink(State* newState, char condition);
 	string returnName();
 	vector<State*> transitions;
-	vector<int> conditions;
+	vector<char> conditions;
 };
 
